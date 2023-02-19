@@ -13,12 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.3.0
 
-      - name: Build and Deploy
-        uses: jenkey2011/vuepress-deploy@master
-
-        env:
-          ACCESS_TOKEN: ${{ github.token }}
-          TARGET_REPO: zhangpanqin/demo4
-          TARGET_BRANCH: gh_pages
-          BUILD_SCRIPT: yarn && yarn docs:build
-          BUILD_DIR: docs/.vuepress/dist/
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        if: success()
+        with:
+          target_branch: gh-pages
+          build_dir: public
+          jekyll: false
