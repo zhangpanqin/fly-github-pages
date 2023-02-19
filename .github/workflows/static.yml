@@ -6,6 +6,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions: read-all|write-all
     environment:
       name: vue-press
     steps:
@@ -14,6 +15,7 @@ jobs:
 
       - name: Build and Deploy
         uses: jenkey2011/vuepress-deploy@master
+
         env:
           ACCESS_TOKEN: ${{ github.token }}
           TARGET_REPO: zhangpanqin/demo4
