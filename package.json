@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "张攀钦",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.8"
+  },
+  "scripts": {
+    "docs:dev": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
+    "docs:build": "export NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs"
+  }
+}
