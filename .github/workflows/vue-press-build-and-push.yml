@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Push static content to gh-pages branches
 on:
   push:
     branches: ["main"]

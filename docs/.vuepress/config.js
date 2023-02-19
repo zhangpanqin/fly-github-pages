@@ -1,4 +1,4 @@
 module.exports = {
   title: "张攀钦的博客",
-  base: "/demo7/",
+  base: "/fly-github-pages/",
 };
