@@ -31,6 +31,9 @@ jobs:
 
   deploy:
     needs: build-and-upload-pages-artifact
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     environment:
       name: github-pages
